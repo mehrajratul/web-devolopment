@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore DOM</title>
+    <style>
+        article{
+            border: 2px solid tomato;
+            border-radius: 20px;
+            margin: 5px;
+            padding: 5px;
+        }
+        .special.h3{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h3>exploring dom</h3>
+            <article id="first-article">
+                <h3>article-1</h3>
+                <p class="author">author-1</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi mollitia repudiandae necessitatibus sapiente reprehenderit animi, nulla praesentium doloribus cupiditate nobis ea delectus veniam tempora saepe similique rerum quisquam laudantium blanditiis.</p>
+            </article>
+            <article class="special">
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Sapiente velit nemo non dicta voluptate quo ipsam illo, sint soluta illum reprehenderit officia? Odit tempora pariatur eum ullam neque, impedit repellendus in cupiditate inventore, incidunt est, laborum maxime illum.</p>
+            </article>
+            <article class="special">
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Voluptatum magni ad commodi hic incidunt tenetur consectetur quis natus iusto aut culpa quod necessitatibus quaerat aperiam eius eveniet, consequuntur obcaecati, distinctio fuga beatae tempora architecto vel? Libero, ullam ipsam.</p>
+            </article>
+        </section>
+    </main>
+    <!-- <script>
+        // // DOM ==> DOCUMENT OBJECT MODEL.
+        var authors = document.getElementsByClassName('author');
+        for (var i = 0; i < authors.length; i++) {
+            var element = authors[i];
+            console.log(element.innerHTML);
+            element.innerHTML = 'Lekhok-' + (i + 1);
+            element.style.backgroundColor = 'lightblue';
+            element.style.margin = '10px';
+        }
+    </script> -->
+    <!-- <script>
+        var authors = document.querySelectorAll('.special h3');
+        for (var i=0; i < authors.length; i++){
+            var element = authors[i];
+            element.innerHTML = 'BUDDHiman-'+ (i + 1);
+            element.style.backgroundColor = 'yellow';
+            element.style.margin = '10px';
+        }
+    </script> -->
+    <script>
+        const article = document.getElementById('first-article');
+        const newParagraph = document.createElement('p');
+        newParagraph.innerHTML = 'This is added by javascript';
+        article.appendChild(newParagraph);
+    </script>
+</body>
+</html>
